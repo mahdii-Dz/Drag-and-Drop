@@ -11,15 +11,19 @@ for(list of Lists){
             e.preventDefault();
         })
         rightBox.addEventListener('drop',()=>{
-            rightBox.appendChild(selected)
-            selected = null;
+            if(selected){
+                rightBox.appendChild(selected)
+                selected = null;
+            }
         })
         leftBox.addEventListener('dragover',(e)=>{
             e.preventDefault();
         })
         leftBox.addEventListener('drop',()=>{
-            leftBox.appendChild(selected)
-            selected = null;
+            if(selected){
+                leftBox.appendChild(selected)
+                selected = null;
+            }
         })
     })
 }
